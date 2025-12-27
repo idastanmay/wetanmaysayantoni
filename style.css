@@ -1,0 +1,76 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#fff;
+  text-align:center;
+}
+
+/* NAV */
+nav{
+  background:#111;
+  padding:15px;
+}
+nav a{
+  color:white;
+  margin:0 12px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+  url("https://images.unsplash.com/photo-1529636798458-92182e662485") center/cover;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+/* TEXT */
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;
+}
+
+#countdown{
+  margin:20px;
+  font-size:1.4rem;
+  color:#ffd27d;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:12px 25px;
+  background:#c59d5f;
+  color:white;
+  border-radius:5px;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn:hover{
+  background:#a8803f;
+}
+
+/* ANIMATION */
+.fade{
+  animation:fadeIn 2s;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  h1{font-size:2.2rem}
+}
