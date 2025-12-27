@@ -24,9 +24,23 @@
 
 
   <div class="buttons">
-    <a href="https://wa.me/91XXXXXXXXXX?text=We%20will%20attend%20the%20wedding" class="btn">RSVP WhatsApp</a>
-    <a href="https://forms.gle/YOURFORM" class="btn">RSVP Google Form</a>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX" onclick="showRSVP()" target="_blank">
+    RSVP WhatsApp
+  </a>
+  <a class="btn" href="https://forms.gle/YOURFORM" onclick="showRSVP()" target="_blank">
+    RSVP Google Form
+  </a>
+</div>
+
+<!-- RSVP POPUP -->
+<div id="rsvp-popup">
+  <div class="popup-box">
+    <h2>💖 Thank You!</h2>
+    <p>Your RSVP means a lot to us.</p>
+    <button onclick="closeRSVP()">Close</button>
   </div>
+</div>
+
 </section>
 
 <script src="script.js"></script>

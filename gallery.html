@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<h1>Our Moments</h1>
 
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552" width="250">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" width="250">
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" width="250">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="event.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="venue.html">Venue</a>
+</nav>
 
+<section class="gallery-wrapper">
+  <h1>Our Moments</h1>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552" onclick="openLightbox(this.src)">
+    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485" onclick="openLightbox(this.src)">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" onclick="openLightbox(this.src)">
+    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
