@@ -127,3 +127,48 @@ nav a{
 @media(max-width:600px){
   .hero h1{font-size:2.2rem}
 }
+
+
+/* ===== VENUE LAYOUT FIX ===== */
+
+.venue-section{
+  padding:120px 6% 80px;
+}
+
+.venue-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:50px;
+}
+
+.venue-card{
+  background:rgba(255,215,128,0.08);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(197,157,95,0.25);
+}
+
+.venue-card h2{
+  color:#f5d27d;
+  margin-bottom:10px;
+}
+
+.venue-card p{
+  margin-bottom:15px;
+}
+
+.venue-card iframe{
+  width:100%;
+  height:320px;
+  border:0;
+  border-radius:16px;
+  margin-bottom:15px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media(max-width:900px){
+  .venue-grid{
+    grid-template-columns:1fr;
+  }
+}
