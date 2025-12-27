@@ -6,23 +6,23 @@
 }
 
 body{
-  background:#0f0f0f;
+  background:#0b0b0b;
   color:#fff;
   text-align:center;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
   padding:15px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(12px);
   z-index:1000;
 }
 nav a{
-  color:#fff;
+  color:#f5d27d;
   margin:0 15px;
   text-decoration:none;
   font-weight:500;
@@ -30,55 +30,59 @@ nav a{
 
 /* HERO */
 .hero{
-  height:100vh;
+  min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     url("https://images.unsplash.com/photo-1529636798458-92182e662485") center/cover;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding-top:60px;
+  padding-top:70px;
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
   font-size:3.5rem;
+  background:linear-gradient(135deg,#f5d27d,#c59d5f);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   animation:fadeUp 1.5s ease;
 }
 
 .hero p{
   margin-top:10px;
   letter-spacing:2px;
-  animation:fadeUp 2s ease;
+  color:#eee;
 }
 
 /* COUNTDOWN */
 .countdown{
   display:flex;
   gap:15px;
-  justify-content:center;
   margin:30px 0;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 .time-box{
-  background:rgba(255,255,255,0.2);
+  background:rgba(255,215,128,0.15);
   backdrop-filter:blur(10px);
-  padding:15px 22px;
-  border-radius:14px;
+  padding:16px 22px;
+  border-radius:16px;
   font-size:1.6rem;
-  color:#fff;
+  color:#f5d27d;
   min-width:90px;
+  box-shadow:0 0 25px rgba(197,157,95,0.25);
 }
 
 .time-box span{
   display:block;
   font-size:0.75rem;
+  margin-top:6px;
   letter-spacing:1px;
-  margin-top:5px;
+  color:#fff;
 }
-
 
 /* BUTTONS */
 .buttons{
@@ -86,9 +90,9 @@ nav a{
 }
 
 .btn{
-  padding:14px 28px;
+  padding:14px 30px;
   margin:10px;
-  background:linear-gradient(135deg,#c59d5f,#f1d18a);
+  background:linear-gradient(135deg,#f5d27d,#c59d5f);
   color:#000;
   border-radius:30px;
   text-decoration:none;
@@ -97,22 +101,29 @@ nav a{
 }
 
 .btn:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
+  box-shadow:0 0 25px rgba(245,210,125,.6);
 }
 
-/* ANIMATIONS */
+/* QR SECTION */
+.qr-section{
+  margin:50px 0;
+}
+
+.qr-section img{
+  width:180px;
+  border-radius:15px;
+  background:#fff;
+  padding:10px;
+}
+
+/* ANIMATION */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(40px)}
   to{opacity:1;transform:translateY(0)}
 }
 
-@keyframes zoomIn{
-  from{opacity:0;transform:scale(.8)}
-  to{opacity:1;transform:scale(1)}
-}
-
 /* RESPONSIVE */
 @media(max-width:600px){
   .hero h1{font-size:2.2rem}
-  #countdown{flex-wrap:wrap;justify-content:center}
 }
