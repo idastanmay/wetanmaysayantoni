@@ -1,14 +1,29 @@
-const weddingDate = new Date("Feb 6, 2026 00:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(()=>{
-  const now = new Date().getTime();
-  const diff = weddingDate - now;
+  const weddingDate = new Date("2026-02-06T00:00:00").getTime();
 
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-  const s = Math.floor((diff % (1000*60)) / 1000);
+  const countdownEl = document.getElementById("countdown");
 
-  document.getElementById("countdown").innerHTML =
-  `${d} Days ${h} Hours ${m} Minutes ${s} Seconds`;
-},1000);
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    if (diff < 0) {
+      countdownEl.innerHTML = "💍 We are Married 💍";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdownEl.innerHTML = `
+      <div class="time-box">${days}<span>Days</span></div>
+      <div class="time-box">${hours}<span>Hours</span></div>
+      <div class="time-box">${minutes}<span>Minutes</span></div>
+      <div class="time-box">${seconds}<span>Seconds</span></div>
+    `;
+  }, 1000);
+
+});

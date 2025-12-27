@@ -6,71 +6,110 @@
 }
 
 body{
-  background:#fff;
+  background:#0f0f0f;
+  color:#fff;
   text-align:center;
 }
 
 /* NAV */
 nav{
-  background:#111;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
   padding:15px;
+  z-index:1000;
 }
 nav a{
-  color:white;
-  margin:0 12px;
+  color:#fff;
+  margin:0 15px;
   text-decoration:none;
+  font-weight:500;
 }
 
 /* HERO */
 .hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-  url("https://images.unsplash.com/photo-1529636798458-92182e662485") center/cover;
-  color:white;
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1529636798458-92182e662485") center/cover;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  padding-top:60px;
 }
 
-/* TEXT */
-h1{
+.hero h1{
   font-family:'Playfair Display',serif;
-  font-size:3rem;
+  font-size:3.5rem;
+  animation:fadeUp 1.5s ease;
 }
 
+.hero p{
+  margin-top:10px;
+  letter-spacing:2px;
+  animation:fadeUp 2s ease;
+}
+
+/* COUNTDOWN */
 #countdown{
-  margin:20px;
-  font-size:1.4rem;
-  color:#ffd27d;
+  display:flex;
+  gap:15px;
+  margin:30px 0;
+  animation:zoomIn 2s ease;
 }
 
-/* BUTTON */
+.time-box{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  padding:15px 20px;
+  border-radius:15px;
+  font-size:1.8rem;
+  min-width:90px;
+}
+
+.time-box span{
+  display:block;
+  font-size:0.8rem;
+  letter-spacing:1px;
+  margin-top:5px;
+}
+
+/* BUTTONS */
+.buttons{
+  margin-top:20px;
+}
+
 .btn{
-  display:inline-block;
+  padding:14px 28px;
   margin:10px;
-  padding:12px 25px;
-  background:#c59d5f;
-  color:white;
-  border-radius:5px;
+  background:linear-gradient(135deg,#c59d5f,#f1d18a);
+  color:#000;
+  border-radius:30px;
   text-decoration:none;
+  font-weight:600;
   transition:.3s;
 }
+
 .btn:hover{
-  background:#a8803f;
+  transform:scale(1.05);
 }
 
-/* ANIMATION */
-.fade{
-  animation:fadeIn 2s;
-}
-
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(30px)}
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
   to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes zoomIn{
+  from{opacity:0;transform:scale(.8)}
+  to{opacity:1;transform:scale(1)}
 }
 
 /* RESPONSIVE */
 @media(max-width:600px){
-  h1{font-size:2.2rem}
+  .hero h1{font-size:2.2rem}
+  #countdown{flex-wrap:wrap;justify-content:center}
 }
