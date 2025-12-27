@@ -191,3 +191,50 @@ nav a{
   }
 }
 
+/* ===== FINAL VENUE DESKTOP FIX ===== */
+
+.venue-wrapper{
+  background:#0b0b0b;
+  padding:80px 20px;
+}
+
+.venue-container{
+  max-width:1200px;        /* 👈 KEY FIX */
+  margin:0 auto;           /* 👈 CENTER */
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.venue-card{
+  background:#111;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 0 35px rgba(197,157,95,0.25);
+  text-align:center;
+}
+
+.venue-card h2{
+  color:#f5d27d;
+  margin-bottom:5px;
+}
+
+.venue-name{
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+.venue-card iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+
+/* 📱 Tablet + Mobile */
+@media (max-width: 900px){
+  .venue-container{
+    grid-template-columns:1fr;
+  }
+}
